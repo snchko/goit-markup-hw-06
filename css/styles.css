@@ -125,7 +125,7 @@ body {
   word-wrap: break-word;
 }
 .menu-link {
-  color: #404bbf;
+  color: var(--NAVY-BLUE, #2e2f42);
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -314,7 +314,6 @@ body {
 }
 .menu-link:hover,
 .menu-link:focus {
-  background-color: #404bbf;
   color: #404bbf;
 }
 .address-info:hover,
@@ -343,7 +342,6 @@ body {
 button:hover,
 button:focus {
   background-color: #404bbf;
-  color: #404bbf;
 }
 .title-studio::after {
   content: '';
@@ -392,9 +390,7 @@ button:focus {
   line-height: 24px;
   letter-spacing: 0.32px;
 }
-.social-media {
-  display: flex;
-}
+
 .media-list-class {
   display: flex;
   justify-content: center;
