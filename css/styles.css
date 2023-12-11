@@ -114,10 +114,13 @@ button {
   }
   .team-list {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 72px;
+    align-items: center;
   }
   .team {
     border-radius: 0px 0px 4px 4px;
+    width: 264px;
   }
   .concept-list {
     display: flex;
@@ -244,10 +247,17 @@ button {
     letter-spacing: 0.72px;
     margin-bottom: 72px;
   }
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+  }
   .portfolio-item {
-    gap: 24px;
+    gap: 48px;
     border-radius: 0px 0px 4px 4px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 288px;
   }
   .portfolio-item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -395,6 +405,7 @@ button {
 
   .portfolio-item :hover .overlay {
     transform: translateY(0%);
+    width: 288px;
   }
 
   .loto-item-div {
@@ -510,12 +521,6 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
-  }
   .link-color:hover,
   .link-color:focus {
     background-color: #404bbf;
@@ -853,15 +858,18 @@ button {
   }
   .team-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
+    justify-content: center;
   }
   .team {
     border-radius: 0px 0px 4px 4px;
+    width: 264px;
   }
   .concept-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 72px 24px;
+    gap: 64px 24px;
   }
   body {
     font-family: 'Roboto', sans-serif;
@@ -984,10 +992,17 @@ button {
     letter-spacing: 0.72px;
     margin-bottom: 72px;
   }
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
   .portfolio-item {
     gap: 24px;
     border-radius: 0px 0px 4px 4px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 356px;
   }
   .portfolio-item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -1250,12 +1265,6 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
-  }
   .link-color:hover,
   .link-color:focus {
     background-color: #404bbf;
@@ -1560,7 +1569,6 @@ button {
   }
   .advan-name {
     font-size: 20px;
-
     font-weight: 500;
     line-height: 1.2;
   }
@@ -1571,5 +1579,12 @@ button {
 
   .logo-item-media {
     fill: #f4f4fd;
+  }
+  .portfolio-list {
+    column-gap: 24px;
+    row-gap: 48px;
+  }
+  .portfolio-item {
+    width: 360px;
   }
 }
