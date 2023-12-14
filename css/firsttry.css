@@ -13,7 +13,7 @@
   .container {
     max-width: 1158px;
   }
-}
+} */
 /* ===================== Mobile ============================= */
 @media screen and (max-width: 768px) {
   .header-container {
@@ -1554,4 +1554,4 @@
   .portfolio-item {
     width: 360px;
   }
-} */
+}
