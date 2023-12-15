@@ -524,14 +524,14 @@ button {
 /* ----------DESKTOP-HEADER---------- */
 
 /* ----------------MOBILE-FIRST-SECTION---------------- */
-@media screen and (min-resolution: 192px) and (min-width: 768px),
-  screen and (min-resolution: 2dppx) and (min-width: 768px),
-  screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+@media screen and (min-resolution: 192px) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
   .section-services {
     background-color: #2e2f42;
     padding: 188px 0;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/images2.0/Dark-bg@2x-mobile.jpg);
+      url(../images/Dark-bg@2x-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover 1440px;
@@ -547,7 +547,7 @@ button {
   background-color: #2e2f42;
   padding: 188px 0;
   background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/images2.0/Dark-bg@2x.jpg);
+    url(../images/Dark-bg@2x-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover 1440px;
@@ -734,9 +734,8 @@ button {
 }
 
 .card-content {
-  padding-top: 32px;
-  padding-right: 16px;
-  width: 232px;
+  padding-top: 32px 0;
+  max-width: 264px;
 }
 
 .team-list {
@@ -889,9 +888,8 @@ button {
     gap: 48px 24px;
   }
 
-  .conteiner-portfolio {
+  .card-content {
     width: 356px;
-    height: 120px;
   }
   .portfolio-item {
     width: 356px;
@@ -908,8 +906,8 @@ button {
     max-width: 1158px;
   }
   .conteiner-portfolio {
-    width: 360px;
-    height: 120px;
+    max-width: 360px;
+    border: 1px solid #e7e9fc;
   }
   .overlay {
     position: absolute;
@@ -929,9 +927,6 @@ button {
   .portfolio-item-div {
     position: relative;
     overflow: hidden;
-  }
-  .portfolio-item {
-    width: calc((100% - 48px) / 3);
   }
 
   .portfolio-link:hover {
@@ -1106,9 +1101,15 @@ button {
   .footer-button {
     margin-left: 0;
   }
+  .footer-form {
+    margin-left: 0;
+  }
   .subscribe-form {
-    display: flex;
-    align-items: center;
+    margin-left: 0;
+  }
+  .footer-label {
+    margin-left: 0;
+    width: 264px;
   }
 }
 
@@ -1208,7 +1209,7 @@ button {
   padding: 0;
 }
 
-.modal-title {
+.order-service-description {
   width: 256px;
   color: #2e2f42;
   text-align: center;
@@ -1220,11 +1221,11 @@ button {
   margin-bottom: 16px;
 }
 
-.contacts-form-field-wrapper {
+.order-service-field-wrapper {
   margin-bottom: 8px;
 }
 
-.contacts-form-label {
+.order-service-label {
   display: block;
   color: #8e8f99;
   font-size: 12px;
@@ -1234,11 +1235,11 @@ button {
   margin-bottom: 4px;
 }
 
-.contacts-form-input-wrapper {
+.order-service-input-wrapper {
   position: relative;
 }
 
-.contacts-form-input {
+.order-service-input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1249,7 +1250,7 @@ button {
   outline: 0px solid transparent;
 }
 
-.contacts-form-input-icon {
+.order-service-input-icon {
   position: absolute;
   top: 50%;
   left: 16px;
@@ -1257,11 +1258,11 @@ button {
   fill: #2e2f42;
 }
 
-.contacts-form-comment-wrapper {
+.order-service-field-comment {
   margin-bottom: 16px;
 }
 
-.contacts-form-comment {
+.order-service-textarea-comment {
   width: 100%;
   height: 120px;
   color: rgba(46, 47, 66, 0.4);
@@ -1277,15 +1278,15 @@ button {
   outline: 0px solid transparent;
 }
 
-.contacts-form-comment::placeholder {
+.order-service-textarea-comment::placeholder {
   color: #2e2f4266;
 }
 
-.contacts-form-checkbox-wrapper {
+.order-service-checkbox-wrapper {
   margin-bottom: 24px;
 }
 
-.contacts-form-checkbox-label {
+.order-service-checkbox-label {
   color: #8e8f99;
   font-size: 12px;
   font-weight: 400;
@@ -1293,7 +1294,7 @@ button {
   letter-spacing: 0.04em;
 }
 
-.privacy-policy {
+.accent-color {
   color: #4d5ae5;
   font-size: 12px;
   font-weight: 400;
@@ -1302,7 +1303,7 @@ button {
   text-decoration-line: underline;
 }
 
-.contacts-form-own-checkbox {
+.order-service-own-checkbox {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1317,17 +1318,17 @@ button {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-form-checkbox:checked + .contacts-form-checkbox-label > .contacts-form-own-checkbox {
+.order-service-checkbox:checked + .order-service-checkbox-label > .order-service-own-checkbox {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
 }
 
-.contacts-form-checkbox:focus + .contacts-form-checkbox-label > .contacts-form-own-checkbox {
+.order-service-checkbox:focus + .order-service-checkbox-label > .order-service-own-checkbox {
   outline: 2px solid rgba(0, 0, 255, 0.5);
 }
 
-.contacts-form-send-btn {
+.order-service-submit-btn {
   display: block;
   min-width: 169px;
   height: 56px;
@@ -1348,7 +1349,7 @@ button {
   .modal {
     width: 408px;
   }
-  .modal-title {
+  .order-service-description {
     width: 360px;
   }
 }
@@ -1370,23 +1371,23 @@ button {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .contacts-form-input {
+  .order-service-input {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .contacts-form-input:focus {
+  .order-service-input:focus {
     border-color: #4d5ae5;
   }
 
-  .contacts-form-input-icon {
+  .order-service-input-icon {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .contacts-form-input:focus + .contacts-form-input-icon {
+  .order-service-input:focus + .order-service-input-icon {
     fill: #4d5ae5;
   }
 
-  .contacts-form-comment {
+  .order-service-textarea-comment {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -1394,16 +1395,16 @@ button {
     color: #2e2f4266;
   }
 
-  .contacts-form-comment:focus {
+  .order-service-textarea-comment:focus {
     border-color: #4d5ae5;
   }
 
-  .contacts-form-send-btn {
+  .order-service-submit-btn {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .contacts-form-send-btn:hover,
-  .contacts-form-send-btn:focus {
+  .order-service-submit-btn:hover,
+  .order-service-submit-btn:focus {
     background-color: #404bbf;
   }
 }
