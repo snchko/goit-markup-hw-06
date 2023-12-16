@@ -51,8 +51,8 @@ button {
 /* ----------MOBILE-HEADER---------- */
 .container {
   max-width: 320px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -93,10 +93,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.main-header {
-  padding-top: 17.5px;
-  padding-bottom: 17.5px;
 }
 
 .top-nav {
@@ -465,8 +461,10 @@ button {
     color: #404bbf;
   }
   .address-list {
+    font-size: 14px;
     display: flex;
     flex-direction: column;
+    gap: 12px;
   }
   .address-info {
     color: #434455;
@@ -529,7 +527,7 @@ button {
   screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
   .section-services {
     background-color: #2e2f42;
-    padding: 188px 0;
+    padding: 72px 0;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/Dark-bg@2x-mobile.jpg);
     background-repeat: no-repeat;
@@ -545,7 +543,7 @@ button {
 
 .section-services {
   background-color: #2e2f42;
-  padding: 188px 0;
+  padding: 72px 0;
   background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/Dark-bg@2x-mobile.jpg);
   background-repeat: no-repeat;
@@ -602,6 +600,7 @@ button {
   screen and (min-resolution: 2dppx) and (min-width: 768px),
   screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
   .section-services {
+    padding: 112px 0;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/images2.0/Dark-bg@2x-tablet.jpg.jpg);
   }
@@ -609,6 +608,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .section-services {
+    padding: 112px 0;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/images2.0/Dark-bg-tablet.jpg.jpg);
   }
@@ -669,7 +669,10 @@ button {
 .concept-list {
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  gap: 72px 24px;
+}
+.concept-item {
+  width: 288px;
 }
 
 /* -----------TABLET-CONCEPT------------ */
@@ -677,11 +680,11 @@ button {
 @media screen and (min-width: 768px) {
   .concept-list {
     flex-direction: row;
-    gap: 72px 24px;
     flex-wrap: wrap;
+    gap: 72px 24px;
   }
-  .advan-descrp {
-    width: 336px;
+  .concept-item {
+    width: calc((100% - 24px) / 2);
   }
   .advan-name {
     text-align: left;
@@ -694,7 +697,13 @@ button {
   .section-concept {
     padding: 120px 0;
   }
-
+  .advan-name {
+    font-weight: 500;
+    font-size: 36px;
+  }
+  .advan-descrp {
+    font-weight: 400;
+  }
   .concept-item {
     width: calc((100% - 72px) / 4);
   }
@@ -735,11 +744,12 @@ button {
 
 .card-content {
   padding-top: 32px 0;
-  max-width: 264px;
+  width: 264px;
 }
 
 .team-list {
   display: flex;
+  align-items: center;
   gap: 72px 0;
   flex-direction: column;
   justify-content: center;
@@ -824,7 +834,8 @@ button {
 
 /* --------------MOBILE-OUR-PORTFOLIO------------- */
 .container {
-  max-width: 288px;
+  max-width: 320px;
+  padding: 16px;
 }
 
 .section-portfolio {
@@ -854,9 +865,10 @@ button {
   border-top: none;
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   background-color: #fff;
+}
+.conteiner-portfolio {
   width: 288px;
 }
-
 .overlay {
   display: none;
 }
@@ -889,6 +901,9 @@ button {
   }
 
   .card-content {
+    width: 264px;
+  }
+  .conteiner-portfolio {
     width: 356px;
   }
   .portfolio-item {
@@ -896,7 +911,8 @@ button {
     height: 420px;
   }
   .container {
-    max-width: 766px;
+    max-width: 768px;
+    padding: 0 16px;
   }
 }
 
@@ -904,6 +920,7 @@ button {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding: 0 15px;
   }
   .conteiner-portfolio {
     max-width: 360px;
@@ -966,6 +983,9 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
+.footer-logo-location {
+  text-align: center;
+}
 
 .footer-logo-name {
   color: #f4f4fd;
@@ -977,7 +997,7 @@ button {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.32px;
-  width: 288px;
+  width: 264px;
 }
 
 .sm-footer {
@@ -987,7 +1007,7 @@ button {
   line-height: 24px;
   letter-spacing: 0.32px;
   margin-bottom: 16px;
-  margin-left: 80px;
+  text-align: center;
 }
 
 .sm-footer-list {
@@ -1023,11 +1043,11 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
-  margin-left: 90px;
+  text-align: center;
 }
 
 .footer-input {
-  width: 264px;
+  width: 288px;
   height: 40px;
   border: 1px solid #fff;
   background-color: transparent;
@@ -1061,7 +1081,7 @@ button {
   background-color: #4d5ae5;
   border-radius: 4px;
   border: none;
-  margin-left: 50px;
+  margin-left: 61px;
 }
 
 .footer-button-icon {
@@ -1083,11 +1103,11 @@ button {
 /* ---------------TABLET-FOOTER------------ */
 @media screen and (min-width: 768px) {
   .footer-m-div {
+    width: 586px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 72px 24px;
-    justify-content: center;
   }
   .footer-logo {
     margin-left: 0;
@@ -1096,7 +1116,7 @@ button {
     margin-left: 0;
   }
   .subscribe-text {
-    margin-left: 0;
+    text-align: left;
   }
   .footer-button {
     margin-left: 0;
@@ -1109,17 +1129,27 @@ button {
   }
   .footer-label {
     margin-left: 0;
+  }
+  .footer-input {
     width: 264px;
+    margin-right: 24px;
   }
 }
 
 /* --------------DESKTOP-FOOTER--------------- */
 @media screen and (min-width: 1158px) {
   .footer-m-div {
+    width: 1158px;
+    gap: 0;
     align-items: baseline;
     flex-wrap: nowrap;
   }
-
+  .logo-par {
+    margin-right: 120px;
+  }
+  .social-media-footer-div {
+    margin-right: 80px;
+  }
   .sm-footer-item-sv {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -1186,7 +1216,7 @@ button {
   min-height: 584px;
   background-color: #fcfcfc;
   border-radius: 4px;
-  padding: 24px;
+  padding: 16px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
