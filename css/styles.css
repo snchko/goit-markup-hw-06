@@ -1134,6 +1134,12 @@ button {
     width: 264px;
     margin-right: 24px;
   }
+  .footer-logo-location {
+    text-align: left;
+  }
+  .sm-footer {
+    text-align: left;
+  }
 }
 
 /* --------------DESKTOP-FOOTER--------------- */
@@ -1144,8 +1150,16 @@ button {
     align-items: baseline;
     flex-wrap: nowrap;
   }
+  .footer-logo-location {
+    text-align: left;
+  }
+  .sm-footer {
+    text-align: left;
+  }
   .logo-par {
     margin-right: 120px;
+  }
+  .logo-location {
   }
   .social-media-footer-div {
     margin-right: 80px;
